@@ -7,7 +7,7 @@ import {TextToSpeechPage} from "./src/pages/TextToSpeechPage"
 export default function App() {
     return (
         <NativeRouter>
-            <View style={styles.container}>
+            <View>
                 <Routes>
                     <Route exact path="/" element={<RecordPlaybackPage/>} />
                     <Route path="/toPlay" element={<TextToSpeechPage/>} />
@@ -17,11 +17,11 @@ export default function App() {
     );
 }
 
-const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        backgroundColor: "#fff",
-        alignItems: "center",
-        justifyContent: "center",
-    },
-});
+// const styles = StyleSheet.create({
+//     container: {
+//         flex: 1,
+//         backgroundColor: "#fff",
+//         alignItems: "center",
+//         justifyContent: "center",
+//     },
+// });
