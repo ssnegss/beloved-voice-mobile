@@ -1,5 +1,5 @@
 import React from "react";
-import { View, TextInput, Button, StyleSheet } from "react-native";
+import { Text, View, TextInput, TouchableOpacity, StyleSheet } from "react-native";
 
 const WindowTextInput = (props) => {
     return (
@@ -33,18 +33,18 @@ const WindowTextInputMultiline = () => {
                 />
             </View>
             <View style={{ flexDirection: "row" }}>
-                <View style={styles.buttonStyle}>
-                    <Button title="1" />
-                </View>
-                <View style={styles.buttonStyle}>
-                    <Button title="2" />
-                </View>
-                <View style={styles.buttonStyle}>
-                    <Button title="3" />
-                </View>
-                <View style={styles.buttonStyle}>
-                    <Button title="4" />
-                </View>
+                <TouchableOpacity style={styles.buttonStyle}>
+                    <Text>1</Text>
+                </TouchableOpacity>
+                <TouchableOpacity style={styles.buttonStyle}>
+                    <Text>2</Text>
+                </TouchableOpacity>
+                <TouchableOpacity style={styles.buttonStyle}>
+                    <Text>3</Text>
+                </TouchableOpacity>
+                <TouchableOpacity style={styles.buttonStyle}>
+                    <Text>4</Text>
+                </TouchableOpacity>
             </View>
         </>
     );
@@ -52,7 +52,10 @@ const WindowTextInputMultiline = () => {
 
 const styles = StyleSheet.create({
     buttonStyle: {
-        padding: 15,
+        margin: 7,
+        height: 40,
+        width: 40,
+        backgroundColor: '#000',
     },
 });
 
