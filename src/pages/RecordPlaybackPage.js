@@ -1,11 +1,15 @@
-import { StyleSheet, Text, View } from "react-native";
-import { NavBarComponent as NavBar } from "../components/NavBarComponent/NavBarComponent"
+import { StyleSheet, Text, View, Button } from "react-native";
 
-export const RecordPlaybackPage = () => {
+export default RecordPlaybackPage = ({ navigation }) => {
+
+    const pressHandler= () => {
+        navigation.navigate('TextToSpeechPage')
+    }
+
     return (
         <View>
-            <NavBar/>
-            <Text>RecordPlayback page</Text>
+            <Button title='to play page' onPress={pressHandler}/>
+            <Text></Text>
         </View>
     );
 };

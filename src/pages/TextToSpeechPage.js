@@ -1,9 +1,15 @@
-import { StyleSheet, Text, View } from "react-native";
+import { StyleSheet, Text, View, Button } from "react-native";
 
-export const TextToSpeechPage = () => {
+export default TextToSpeechPage = ({ navigation }) => {   
+
+    const pressHandler= () => {
+        navigation.navigate('RecordPlaybackPage')
+    }
+
     return (
         <View>
-            <Text>RecordPlayback page</Text>
+            <Button title='to rec page' onPress={pressHandler}/>
+            <Text></Text>
         </View>
     );
 };
