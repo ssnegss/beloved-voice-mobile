@@ -1,5 +1,5 @@
 import React from "react";
-import { View, TextInput, Button } from "react-native";
+import { View, TextInput, Button, StyleSheet } from "react-native";
 
 const WindowTextInput = (props) => {
     return (
@@ -33,14 +33,27 @@ const WindowTextInputMultiline = () => {
                 />
             </View>
             <View style={{ flexDirection: "row" }}>
-                    <Button title="1"></Button>
-                    <Button title="1"></Button>
-                    <Button title="1"></Button>
-                    <Button title="1"></Button>
-
+                <View style={styles.buttonStyle}>
+                    <Button title="1" />
+                </View>
+                <View style={styles.buttonStyle}>
+                    <Button title="2" />
+                </View>
+                <View style={styles.buttonStyle}>
+                    <Button title="3" />
+                </View>
+                <View style={styles.buttonStyle}>
+                    <Button title="4" />
+                </View>
             </View>
         </>
     );
 };
+
+const styles = StyleSheet.create({
+    buttonStyle: {
+        padding: 15,
+    },
+});
 
 export default WindowTextInputMultiline;
