@@ -8,14 +8,14 @@ const screens = {
         screen: RecordPlaybackPage,
         navigationOptions: {
             title: "Record / Playback Page",
-            headerLeft: null
+            headerLeft: () => null
         },
     },
     TextToSpeechPage: {
         screen: TextToSpeechPage,
         navigationOptions: {
             title: "Text to speech page",
-            headerLeft: null
+            headerLeft: () => null
         }
     },
 };
