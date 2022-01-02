@@ -7,15 +7,15 @@ const screens = {
     RecordPlaybackPage: {
         screen: RecordPlaybackPage,
         navigationOptions: {
-            title: "Record / Playback Page",
-            headerLeft: () => null
+            headerShown: false,
+            headerLeft: () => null,
         },
     },
     TextToSpeechPage: {
         screen: TextToSpeechPage,
         navigationOptions: {
-            title: "Text to speech page",
-            headerLeft: () => null
+            headerShown: false,
+            headerLeft: () => null,
         }
     },
 };

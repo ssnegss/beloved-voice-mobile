@@ -7,16 +7,16 @@ export const WindowComponentRecordPlayback = () => {
         <>
             <WindowTextInputMultiline />
             <View style={{ flexDirection: "row" }}>
-                <TouchableOpacity style={[styles.buttonStyle, styles.startButton]}>
+                <TouchableOpacity style={styles.buttonStyle}>
                     <Image source={require("../../img/start.png")} />
                 </TouchableOpacity>
-                <TouchableOpacity style={[styles.buttonStyle, styles.stopButton]}>
+                <TouchableOpacity style={styles.buttonStyle}>
                     <Image source={require("../../img/stop.png")} />
                 </TouchableOpacity>
-                <TouchableOpacity style={[styles.buttonStyle, styles.playButton]}>
+                <TouchableOpacity style={styles.buttonStyle}>
                     <Image source={require("../../img/play.png")} />
                 </TouchableOpacity>
-                <TouchableOpacity style={[styles.buttonStyle, styles.pauseButton]}>
+                <TouchableOpacity style={styles.buttonStyle}>
                     <Image source={require("../../img/pause.png")} />
                 </TouchableOpacity>
             </View>

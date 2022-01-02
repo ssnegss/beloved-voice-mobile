@@ -1,18 +1,21 @@
-import { StyleSheet, Button, Text, View, ImageBackground, Dimensions, TouchableOpacity } from "react-native";
+import { StyleSheet, Image, View } from "react-native";
 import { NativeBaseProvider, Box, Center } from "native-base";
 import { WindowComponentRecordPlayback as TextWindow } from "../components/WindowComponentRecordPlayback/WindowComponentRecordPlayback";
 import { NavigationButtonComponent as NavBtn } from "../components/NavButtonComponent/NavButtonComponent";
 import { ImageBackgroundComponent as BcgImg } from "../components/BackgroundImageComponent/BackgroundImageComponent";
 
 export default RecordPlaybackPage = ({ navigation }) => {
-    const pressHandler = () => {
+    const pressHandlerTextToSpeech = () => {
         navigation.navigate("TextToSpeechPage");
     };
 
     return (
         <BcgImg>
             <NativeBaseProvider>
-                <NavBtn text="TTS page" onPress={pressHandler} />
+                <View style={{ flexDirection: "row", justifyContent: "center"}}>
+                    <NavBtn image={require("../img/microphone.png")} />
+                    <NavBtn image={require("../img/sound.png")} onPress={pressHandlerTextToSpeech} />
+                </View>
                 <View style={styles.mainWindowTextBoxDiv}>
                     <View style={styles.mainWindowTextBox}>
                         <TextWindow />
@@ -29,11 +32,9 @@ const styles = StyleSheet.create({
         alignItems: "center",
     },
     mainWindowTextBox: {
-        width: "70%",
-        borderColor: "gray",
-        borderWidth: 2,
+        width: "80%",
         alignItems: "center",
         backgroundColor: "rgba(370, 370, 370, 0.4)",
         borderRadius: 20,
-    }
+    },
 });
