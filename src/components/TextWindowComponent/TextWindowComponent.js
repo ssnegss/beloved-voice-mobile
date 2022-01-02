@@ -10,8 +10,9 @@ const WindowTextInput = (props) => {
     );
 };
 
-export const WindowTextInputMultiline = () => {
-    const [value, onChangeText] = React.useState("");
+export const WindowTextInputMultiline = (props) => {
+    
+    // const [value, onChangeText] = React.useState("");
 
     return (
         <>
@@ -25,8 +26,8 @@ export const WindowTextInputMultiline = () => {
                 <WindowTextInput
                     multiline
                     numberOfLines={6}
-                    onChangeText={(text) => onChangeText(text)}
-                    value={value}
+                    onChangeText={(text) => props.onChangeText(text)}
+                    value={props.value}
                     style={{ padding: 20 }}
                 />
             </View>

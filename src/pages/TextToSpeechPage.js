@@ -1,6 +1,8 @@
 import { StyleSheet, Text, View, Button, ImageBackground, Dimensions, TouchableOpacity } from "react-native";
 import { NavigationButtonComponent as NavBtn } from "../components/NavButtonComponent/NavButtonComponent";
 import { ImageBackgroundComponent as BcgImg } from "../components/BackgroundImageComponent/BackgroundImageComponent";
+import { WindowComponentTextToSpeech as TextWindow } from "../components/WindowComponentTextToSpeech/WindowComponentTextToSpeech";
+import { HeaderNameComponent as Header } from "../components/HeaderNameComponent/HeaderNameComponent";
 
 export default TextToSpeechPage = ({ navigation }) => {
     const pressHandlerRecordPlayback = () => {
@@ -14,7 +16,12 @@ export default TextToSpeechPage = ({ navigation }) => {
                     <NavBtn image={require("../img/microphone.png")} onPress={pressHandlerRecordPlayback} />
                     <NavBtn image={require("../img/sound.png")} />
                 </View>
-                <Text></Text>
+                <Header header={"Text to Speech page"} />
+                <View style={styles.mainWindowTextBoxDiv}>
+                    <View style={styles.mainWindowTextBox}>
+                        <TextWindow />
+                    </View>
+                </View>
             </View>
         </BcgImg>
     );
@@ -26,9 +33,9 @@ const styles = StyleSheet.create({
         alignItems: "center",
     },
     mainWindowTextBox: {
-        width: "70%",
-        borderColor: "gray",
-        borderWidth: 2,
+        width: "80%",
         alignItems: "center",
+        backgroundColor: "rgba(370, 370, 370, 0.4)",
+        borderRadius: 20,
     },
 });
