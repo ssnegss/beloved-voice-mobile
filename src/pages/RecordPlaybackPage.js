@@ -1,6 +1,6 @@
 import { StyleSheet, Button, Text, View, ImageBackground, Dimensions, TouchableOpacity } from "react-native";
 import { NativeBaseProvider, Box, Center } from "native-base";
-import WindowTextInput from "../components/TextInputComponent/TextInputRecordPlayback";
+import { WindowComponentRecordPlayback as TextWindow } from "../components/WindowComponentRecordPlayback/WindowComponentRecordPlayback";
 import { NavigationButtonComponent as NavBtn } from "../components/NavButtonComponent/NavButtonComponent";
 import { ImageBackgroundComponent as BcgImg } from "../components/BackgroundImageComponent/BackgroundImageComponent";
 
@@ -15,7 +15,7 @@ export default RecordPlaybackPage = ({ navigation }) => {
                 <NavBtn text="TTS page" onPress={pressHandler} />
                 <View style={styles.mainWindowTextBoxDiv}>
                     <View style={styles.mainWindowTextBox}>
-                        <WindowTextInput />
+                        <TextWindow />
                     </View>
                 </View>
             </NativeBaseProvider>
@@ -33,12 +33,7 @@ const styles = StyleSheet.create({
         borderColor: "gray",
         borderWidth: 2,
         alignItems: "center",
-    },
-    image: {
-        position: "absolute",
-        left: 0,
-        top: 0,
-        width: Dimensions.get("window").width,
-        height: Dimensions.get("window").height,
-    },
+        backgroundColor: "rgba(370, 370, 370, 0.4)",
+        borderRadius: 20,
+    }
 });
