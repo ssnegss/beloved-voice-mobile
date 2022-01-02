@@ -12,10 +12,14 @@ export const WindowComponentTextToSpeech = () => {
 
     return (
         <>
-            <WindowTextInputMultiline value={value} onChangeText={onChangeText} />
-            <TouchableOpacity style={styles.buttonStyle} onPress={handlePlayButtonClick}>
-                <Image source={require("../../img/start.png")} />
-            </TouchableOpacity>
+            <View style={styles.WindowTextInputTextToSpeech}>
+                <WindowTextInputMultiline value={value} onChangeText={onChangeText} />
+            </View>
+            <View style={styles.buttonDiv}>
+                <TouchableOpacity style={styles.buttonStyle} onPress={handlePlayButtonClick}>
+                    <Image source={require("../../img/start.png")} />
+                </TouchableOpacity>
+            </View>
         </>
     );
 };
@@ -25,5 +29,11 @@ const styles = StyleSheet.create({
         margin: 15,
         height: 40,
         width: 40,
+    },
+    WindowTextInputTextToSpeech: {
+        alignItems: "center",
+    },
+    buttonDiv: {
+        marginLeft: 20 
     },
 });

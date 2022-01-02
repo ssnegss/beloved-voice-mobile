@@ -34,7 +34,6 @@ const styles = StyleSheet.create({
     },
     mainWindowTextBox: {
         width: "80%",
-        alignItems: "center",
         backgroundColor: "rgba(370, 370, 370, 0.4)",
         borderRadius: 20,
     },

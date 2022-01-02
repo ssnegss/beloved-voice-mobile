@@ -12,8 +12,6 @@ const WindowTextInput = (props) => {
 
 export const WindowTextInputMultiline = (props) => {
     
-    // const [value, onChangeText] = React.useState("");
-
     return (
         <>
             <View
