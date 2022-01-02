@@ -1,8 +1,8 @@
-import { StyleSheet, Image, View } from "react-native";
-import { NativeBaseProvider, Box, Center } from "native-base";
+import { StyleSheet, Text, View } from "react-native";
 import { WindowComponentRecordPlayback as TextWindow } from "../components/WindowComponentRecordPlayback/WindowComponentRecordPlayback";
 import { NavigationButtonComponent as NavBtn } from "../components/NavButtonComponent/NavButtonComponent";
 import { ImageBackgroundComponent as BcgImg } from "../components/BackgroundImageComponent/BackgroundImageComponent";
+import { HeaderNameComponent as Header } from "../components/HeaderNameComponent/HeaderNameComponent";
 
 export default RecordPlaybackPage = ({ navigation }) => {
     const pressHandlerTextToSpeech = () => {
@@ -11,17 +11,16 @@ export default RecordPlaybackPage = ({ navigation }) => {
 
     return (
         <BcgImg>
-            <NativeBaseProvider>
-                <View style={{ flexDirection: "row", justifyContent: "center"}}>
-                    <NavBtn image={require("../img/microphone.png")} />
-                    <NavBtn image={require("../img/sound.png")} onPress={pressHandlerTextToSpeech} />
+            <View style={{ flexDirection: "row", justifyContent: "center" }}>
+                <NavBtn image={require("../img/microphone.png")} />
+                <NavBtn image={require("../img/sound.png")} onPress={pressHandlerTextToSpeech} />
+            </View>
+            <Header header={"Record / Playback page"} />
+            <View style={styles.mainWindowTextBoxDiv}>
+                <View style={styles.mainWindowTextBox}>
+                    <TextWindow />
                 </View>
-                <View style={styles.mainWindowTextBoxDiv}>
-                    <View style={styles.mainWindowTextBox}>
-                        <TextWindow />
-                    </View>
-                </View>
-            </NativeBaseProvider>
+            </View>
         </BcgImg>
     );
 };

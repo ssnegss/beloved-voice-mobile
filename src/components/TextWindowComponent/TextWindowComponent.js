@@ -24,7 +24,7 @@ export const WindowTextInputMultiline = () => {
             >
                 <WindowTextInput
                     multiline
-                    numberOfLines={4}
+                    numberOfLines={6}
                     onChangeText={(text) => onChangeText(text)}
                     value={value}
                     style={{ padding: 20 }}

@@ -3,14 +3,17 @@ import { NavigationButtonComponent as NavBtn } from "../components/NavButtonComp
 import { ImageBackgroundComponent as BcgImg } from "../components/BackgroundImageComponent/BackgroundImageComponent";
 
 export default TextToSpeechPage = ({ navigation }) => {
-    const pressHandler = () => {
+    const pressHandlerRecordPlayback = () => {
         navigation.navigate("RecordPlaybackPage");
     };
 
     return (
         <BcgImg>
             <View>
-            <NavBtn text="RPB page" onPress={pressHandler} />
+                <View style={{ flexDirection: "row", justifyContent: "center" }}>
+                    <NavBtn image={require("../img/microphone.png")} onPress={pressHandlerRecordPlayback} />
+                    <NavBtn image={require("../img/sound.png")} />
+                </View>
                 <Text></Text>
             </View>
         </BcgImg>
@@ -27,5 +30,5 @@ const styles = StyleSheet.create({
         borderColor: "gray",
         borderWidth: 2,
         alignItems: "center",
-    }
+    },
 });
