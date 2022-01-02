@@ -1,5 +1,5 @@
 import React from "react";
-import { Text, View, TextInput, TouchableOpacity, StyleSheet } from "react-native";
+import { Text, View, Image, TouchableOpacity, StyleSheet } from "react-native";
 import { WindowTextInputMultiline } from "../TextWindowComponent/TextWindowComponent";
 
 export const WindowComponentRecordPlayback = () => {
@@ -7,17 +7,17 @@ export const WindowComponentRecordPlayback = () => {
         <>
             <WindowTextInputMultiline />
             <View style={{ flexDirection: "row" }}>
-                <TouchableOpacity style={styles.buttonStyle}>
-                    <Text>1</Text>
+                <TouchableOpacity style={[styles.buttonStyle, styles.startButton]}>
+                    <Image source={require("../../img/start.png")} />
                 </TouchableOpacity>
-                <TouchableOpacity style={styles.buttonStyle}>
-                    <Text>2</Text>
+                <TouchableOpacity style={[styles.buttonStyle, styles.stopButton]}>
+                    <Image source={require("../../img/stop.png")} />
                 </TouchableOpacity>
-                <TouchableOpacity style={styles.buttonStyle}>
-                    <Text>3</Text>
+                <TouchableOpacity style={[styles.buttonStyle, styles.playButton]}>
+                    <Image source={require("../../img/play.png")} />
                 </TouchableOpacity>
-                <TouchableOpacity style={styles.buttonStyle}>
-                    <Text>4</Text>
+                <TouchableOpacity style={[styles.buttonStyle, styles.pauseButton]}>
+                    <Image source={require("../../img/pause.png")} />
                 </TouchableOpacity>
             </View>
         </>
@@ -26,9 +26,8 @@ export const WindowComponentRecordPlayback = () => {
 
 const styles = StyleSheet.create({
     buttonStyle: {
-        margin: 7,
+        margin: 15,
         height: 40,
         width: 40,
-        backgroundColor: "#000",
-    },
+    }
 });
