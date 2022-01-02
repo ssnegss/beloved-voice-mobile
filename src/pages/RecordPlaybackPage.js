@@ -1,6 +1,7 @@
 import { StyleSheet, Button, Text, View, ImageBackground, Dimensions, TouchableOpacity } from "react-native";
 import { NativeBaseProvider, Box, Center } from "native-base";
 import WindowTextInput from "../components/TextInputComponent/TextInputRecordPlayback";
+import { NavBarComponent } from "../components/NavButtonComponent/NavButtonComponent";
 
 export default RecordPlaybackPage = ({ navigation }) => {
     const pressHandler = () => {
@@ -10,11 +11,7 @@ export default RecordPlaybackPage = ({ navigation }) => {
     return (
         <ImageBackground source={require("../img/bcg.png")} style={styles.image}>
             <NativeBaseProvider>
-                <View style={styles.navButtonDiv}>
-                    <TouchableOpacity style={styles.navButton} onPress={pressHandler}>
-                        <Text>to TTS page</Text>
-                    </TouchableOpacity>
-                </View>
+            <NavBarComponent text='TTS page' onPress={pressHandler}/>
                 <View style={styles.mainWindowTextBoxDiv}>
                     <View style={styles.mainWindowTextBox}>
                         <WindowTextInput />
@@ -26,17 +23,6 @@ export default RecordPlaybackPage = ({ navigation }) => {
 };
 
 const styles = StyleSheet.create({
-    navButton: {
-        backgroundColor: "rgba(370, 370, 370, 0.4)",
-        alignItems: "center",
-        width: "30%",
-        padding: 10,
-        margin: 15
-    },
-    navButtonDiv: {
-        justifyContent: "center",
-        alignItems: "center",
-    },
     mainWindowTextBoxDiv: {
         justifyContent: "center",
         alignItems: "center",
