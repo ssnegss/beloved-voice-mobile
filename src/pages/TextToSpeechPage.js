@@ -1,4 +1,5 @@
 import { StyleSheet, Text, View, Button, ImageBackground, Dimensions, TouchableOpacity } from "react-native";
+import { ImageBackgroundComponent as BcgImg } from "../components/BackgroundImageComponent/BackgroundImageComponent";
 
 export default TextToSpeechPage = ({ navigation }) => {
     const pressHandler = () => {
@@ -6,12 +7,12 @@ export default TextToSpeechPage = ({ navigation }) => {
     };
 
     return (
-        <ImageBackground source={require("../img/bcg.png")} style={styles.image}>
+        <BcgImg>
             <View>
                 <Button title="to rec page" onPress={pressHandler} />
                 <Text></Text>
             </View>
-        </ImageBackground>
+        </BcgImg>
     );
 };
 

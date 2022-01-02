@@ -1,6 +1,6 @@
 import { StyleSheet, TouchableOpacity, Text, View } from "react-native";
 
-export const NavBarComponent = (props) => {
+export const NavigationButtonComponent = (props) => {
     return (
         <View style={styles.navButtonDiv}>
             <TouchableOpacity style={styles.navButton} onPress={props.onPress}>

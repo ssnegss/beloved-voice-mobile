@@ -1,7 +1,8 @@
 import { StyleSheet, Button, Text, View, ImageBackground, Dimensions, TouchableOpacity } from "react-native";
 import { NativeBaseProvider, Box, Center } from "native-base";
 import WindowTextInput from "../components/TextInputComponent/TextInputRecordPlayback";
-import { NavBarComponent } from "../components/NavButtonComponent/NavButtonComponent";
+import { NavigationButtonComponent as NavBtn } from "../components/NavButtonComponent/NavButtonComponent";
+import { ImageBackgroundComponent as BcgImg } from "../components/BackgroundImageComponent/BackgroundImageComponent";
 
 export default RecordPlaybackPage = ({ navigation }) => {
     const pressHandler = () => {
@@ -9,16 +10,16 @@ export default RecordPlaybackPage = ({ navigation }) => {
     };
 
     return (
-        <ImageBackground source={require("../img/bcg.png")} style={styles.image}>
+        <BcgImg>
             <NativeBaseProvider>
-            <NavBarComponent text='TTS page' onPress={pressHandler}/>
+                <NavBtn text="TTS page" onPress={pressHandler} />
                 <View style={styles.mainWindowTextBoxDiv}>
                     <View style={styles.mainWindowTextBox}>
                         <WindowTextInput />
                     </View>
                 </View>
             </NativeBaseProvider>
-        </ImageBackground>
+        </BcgImg>
     );
 };
 
