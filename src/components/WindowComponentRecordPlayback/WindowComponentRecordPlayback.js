@@ -1,11 +1,11 @@
 import React from "react";
 import { Text, View, Image, TouchableOpacity, StyleSheet } from "react-native";
-import { WindowTextInputMultiline } from "../TextWindowComponent/TextWindowComponent";
+import { WindowTextInputMultilineRecordPlayback as TextWindow } from "../TextWindowComponent/TextWindowComponentRecordPlayback";
 
 export const WindowComponentRecordPlayback = () => {
     return (
         <>
-            <WindowTextInputMultiline />
+            <TextWindow />
             <View style={{ flexDirection: "row" }}>
                 <TouchableOpacity style={styles.buttonStyle}>
                     <Image source={require("../../img/start.png")} />

@@ -1,6 +1,6 @@
 import React from "react";
 import { View, Button, Image, TouchableOpacity, StyleSheet } from "react-native";
-import { WindowTextInputMultiline } from "../TextWindowComponent/TextWindowComponent";
+import { WindowTextInputMultilineTextToSpeech as TextWindow } from "../TextWindowComponent/TextWindowComponentTextToSpeech";
 import * as Speech from "expo-speech";
 
 export const WindowComponentTextToSpeech = () => {
@@ -13,7 +13,7 @@ export const WindowComponentTextToSpeech = () => {
     return (
         <>
             <View style={styles.WindowTextInputTextToSpeech}>
-                <WindowTextInputMultiline value={value} onChangeText={onChangeText} />
+                <TextWindow value={value} onChangeText={onChangeText} />
             </View>
             <View style={styles.buttonDiv}>
                 <TouchableOpacity style={styles.buttonStyle} onPress={handlePlayButtonClick}>
@@ -34,6 +34,6 @@ const styles = StyleSheet.create({
         alignItems: "center",
     },
     buttonDiv: {
-        marginLeft: 20 
+        marginLeft: 20,
     },
 });
