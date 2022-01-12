@@ -5,9 +5,7 @@ const WindowTextInput = (props) => {
     return <TextInput {...props} editable />;
 };
 
-export const WindowTextInputMultilineRecordPlayback = () => {
-    const [value, onChangeText] = React.useState("");
-
+export const WindowTextInputMultilineRecordPlayback = (props) => {
     return (
         <>
             <View
@@ -20,8 +18,8 @@ export const WindowTextInputMultilineRecordPlayback = () => {
                 <WindowTextInput
                     multiline
                     numberOfLines={6}
-                    onChangeText={(text) => onChangeText(text)}
-                    value={value}
+                    onChangeText={props.onValueChange}
+                    value={props.value}
                     style={{ padding: 20 }}
                 />
             </View>
