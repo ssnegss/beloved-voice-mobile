@@ -14,6 +14,11 @@ export const WindowComponentRecordPlayback = () => {
     const [playButtonDisabled, setPlayButtonDisabled] = useState(true);
     const [pauseButtonDisabled, setPauseButtonDisabled] = useState(true);
 
+    const [startButtonImage, setStartButtonImage] = useState(require("../../img/start.png"))
+    const [stopButtonImage, setStopButtonImage] = useState(require("../../img/stop.png"))
+    const [playButtonImage, setPlayButtonImage] = useState(require("../../img/play.png"))
+    const [pauseButtonImage, setPauseButtonImage] = useState(require("../../img/pause.png"))
+
     async function startRecording() {
         try {
             console.log("Requesting permissions..");
@@ -49,6 +54,11 @@ export const WindowComponentRecordPlayback = () => {
         setPlayButtonDisabled(true);
         setPauseButtonDisabled(true);
         startRecording();
+
+        setStartButtonImage(require("../../img/start-disabled.png"))
+        setStopButtonImage(require("../../img/stop.png"))
+        setPlayButtonImage(require("../../img/play.png"))
+        setPauseButtonImage(require("../../img/pause.png"))
     };
 
     const handleStopButtonClick = async () => {
@@ -57,44 +67,70 @@ export const WindowComponentRecordPlayback = () => {
         setPlayButtonDisabled(false);
         setPauseButtonDisabled(true);
         stopRecording();
+
+        setStartButtonImage(require("../../img/start.png"))
+        setStopButtonImage(require("../../img/stop-disabled.png"))
+        setPlayButtonImage(require("../../img/play.png"))
+        setPauseButtonImage(require("../../img/pause-disabled.png"))
     };
 
     const handlePlayButtonClick = () => {
-        setStartButtonDisabled(true);
-        setStopButtonDisabled(true);
-        setPlayButtonDisabled(true);
-        setPauseButtonDisabled(false);
+        // setStartButtonDisabled(true);
+        // setStopButtonDisabled(true);
+        // setPlayButtonDisabled(true);
+        // setPauseButtonDisabled(false);
+
+        setStartButtonImage(require("../../img/start.png"))
+        setStopButtonImage(require("../../img/stop.png"))
+        setPlayButtonImage(require("../../img/play.png"))
+        setPauseButtonImage(require("../../img/pause.png"))
 
         Speech.speak(textFieldValue, { language: "ru" });
     };
 
+    const handlePauseButtonClick = () => {
+        setStartButtonDisabled(false);
+        setStopButtonDisabled(true);
+        setPlayButtonDisabled(false);
+        setPauseButtonDisabled(true);
+
+        setStartButtonImage(require("../../img/start.png"))
+        setStopButtonImage(require("../../img/stop-disabled.png"))
+        setPlayButtonImage(require("../../img/play.png"))
+        setPauseButtonImage(require("../../img/pause-disabled.png"))
+    };
+
     return (
         <>
-            <TextWindow value={textFieldValue} onValueChange={(e) => setTextFieldValue}/>
+            <TextWindow value={textFieldValue} onValueChange={(e) => setTextFieldValue} />
             <View style={{ flexDirection: "row" }}>
                 <TouchableOpacity
                     style={styles.buttonStyle}
                     onPress={handleStartButtonClick}
                     disabled={startButtonDisabled}
                 >
-                    <Image source={require("../../img/start.png")} />
+                    <Image source={startButtonImage} />
                 </TouchableOpacity>
                 <TouchableOpacity
                     style={styles.buttonStyle}
                     onPress={handleStopButtonClick}
                     disabled={stopButtonDisabled}
                 >
-                    <Image source={require("../../img/stop.png")} />
+                    <Image source={stopButtonImage} />
                 </TouchableOpacity>
                 <TouchableOpacity
                     style={styles.buttonStyle}
                     onPress={handlePlayButtonClick}
                     disabled={playButtonDisabled}
                 >
-                    <Image source={require("../../img/play.png")} />
+                    <Image source={playButtonImage} />
                 </TouchableOpacity>
-                <TouchableOpacity style={styles.buttonStyle} disabled={pauseButtonDisabled}>
-                    <Image source={require("../../img/pause.png")} />
+                <TouchableOpacity
+                    style={styles.buttonStyle}
+                    onClick={handlePauseButtonClick}
+                    disabled={pauseButtonDisabled}
+                >
+                    <Image source={pauseButtonImage} />
                 </TouchableOpacity>
             </View>
         </>
