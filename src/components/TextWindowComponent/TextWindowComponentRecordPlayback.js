@@ -2,7 +2,7 @@ import React from "react";
 import { View, TextInput } from "react-native";
 
 const WindowTextInput = (props) => {
-    return <TextInput {...props} editable = {false} />;
+    return <TextInput {...props} editable={false} />;
 };
 
 export const WindowTextInputMultilineRecordPlayback = (props) => {

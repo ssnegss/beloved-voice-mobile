@@ -9,7 +9,7 @@ const screens = {
         navigationOptions: {
             headerShown: false,
             headerLeft: () => null,
-            tabBarVisible: false
+            tabBarVisible: false,
         },
     },
     TextToSpeechPage: {
@@ -17,7 +17,7 @@ const screens = {
         navigationOptions: {
             headerShown: false,
             headerLeft: () => null,
-        }
+        },
     },
 };
 

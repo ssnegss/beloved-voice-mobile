@@ -9,6 +9,6 @@ const styles = StyleSheet.create({
         fontSize: 25,
         color: "white",
         textAlign: "center",
-        marginBottom: 25
-    }
+        marginBottom: 25,
+    },
 });

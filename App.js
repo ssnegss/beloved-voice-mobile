@@ -1,12 +1,8 @@
-import { StyleSheet, Text, View, ImageBackground } from "react-native";
+import { StyleSheet } from "react-native";
 import Navigation from "./src/routes/Navigation";
 
 export default function App() {
-    return (
-        // <ImageBackground source={require("./src/img/bcg.png")} style={styles.image}>
-            <Navigation />
-        // {/* </ImageBackground> */}
-    );
+    return <Navigation />;
 }
 
 const styles = StyleSheet.create({

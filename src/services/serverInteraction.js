@@ -28,6 +28,6 @@ export const recognizeWithoutGrammarRequest = async (uri) => {
     } catch (ex) {
         console.log(ex);
         // return ex.message;
-        return "Try again :("
+        return "Try again :(";
     }
 };

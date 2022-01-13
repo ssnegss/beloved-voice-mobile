@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View } from "react-native";
+import { StyleSheet, View } from "react-native";
 import { WindowComponentRecordPlayback as TextWindow } from "../components/WindowComponentRecordPlayback/WindowComponentRecordPlayback";
 import { NavigationButtonComponent as NavBtn } from "../components/NavButtonComponent/NavButtonComponent";
 import { ImageBackgroundComponent as BcgImg } from "../components/BackgroundImageComponent/BackgroundImageComponent";

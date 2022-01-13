@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View, Button, ImageBackground, Dimensions, TouchableOpacity } from "react-native";
+import { StyleSheet, View } from "react-native";
 import { NavigationButtonComponent as NavBtn } from "../components/NavButtonComponent/NavButtonComponent";
 import { ImageBackgroundComponent as BcgImg } from "../components/BackgroundImageComponent/BackgroundImageComponent";
 import { WindowComponentTextToSpeech as TextWindow } from "../components/WindowComponentTextToSpeech/WindowComponentTextToSpeech";
