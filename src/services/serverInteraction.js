@@ -27,6 +27,7 @@ export const recognizeWithoutGrammarRequest = async (uri) => {
         return result.data.data;
     } catch (ex) {
         console.log(ex);
-        return ex.message;
+        // return ex.message;
+        return "Try again :("
     }
 };

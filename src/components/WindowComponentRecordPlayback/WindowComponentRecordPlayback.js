@@ -75,10 +75,6 @@ export const WindowComponentRecordPlayback = () => {
     };
 
     const handlePlayButtonClick = () => {
-        // setStartButtonDisabled(true);
-        // setStopButtonDisabled(true);
-        // setPlayButtonDisabled(true);
-        // setPauseButtonDisabled(false);
 
         setStartButtonImage(require("../../img/start.png"))
         setStopButtonImage(require("../../img/stop.png"))

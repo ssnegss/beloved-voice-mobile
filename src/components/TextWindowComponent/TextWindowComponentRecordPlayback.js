@@ -2,7 +2,7 @@ import React from "react";
 import { View, TextInput } from "react-native";
 
 const WindowTextInput = (props) => {
-    return <TextInput {...props} editable />;
+    return <TextInput {...props} editable = {false} />;
 };
 
 export const WindowTextInputMultilineRecordPlayback = (props) => {
@@ -20,7 +20,7 @@ export const WindowTextInputMultilineRecordPlayback = (props) => {
                     numberOfLines={6}
                     onChangeText={props.onValueChange}
                     value={props.value}
-                    style={{ padding: 20 }}
+                    style={{ padding: 20, color: "#000" }}
                 />
             </View>
         </>
