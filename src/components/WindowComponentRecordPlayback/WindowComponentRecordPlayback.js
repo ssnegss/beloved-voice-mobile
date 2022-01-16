@@ -50,33 +50,28 @@ export const WindowComponentRecordPlayback = () => {
         setStartButtonDisabled(true);
         setStopButtonDisabled(false);
         setPlayButtonDisabled(true);
-        setPauseButtonDisabled(true);
         startRecording();
 
         setStartButtonImage(require("../../img/start-disabled.png"));
         setStopButtonImage(require("../../img/stop.png"));
         setPlayButtonImage(require("../../img/play.png"));
-        setPauseButtonImage(require("../../img/pause.png"));
     };
 
     const handleStopButtonClick = async () => {
         setStartButtonDisabled(false);
         setStopButtonDisabled(true);
         setPlayButtonDisabled(false);
-        setPauseButtonDisabled(true);
         stopRecording();
 
         setStartButtonImage(require("../../img/start.png"));
         setStopButtonImage(require("../../img/stop-disabled.png"));
         setPlayButtonImage(require("../../img/play.png"));
-        setPauseButtonImage(require("../../img/pause-disabled.png"));
     };
 
     const handlePlayButtonClick = () => {
         setStartButtonImage(require("../../img/start.png"));
         setStopButtonImage(require("../../img/stop.png"));
         setPlayButtonImage(require("../../img/play.png"));
-        setPauseButtonImage(require("../../img/pause.png"));
 
         Speech.speak(textFieldValue, { language: "ru" });
     };

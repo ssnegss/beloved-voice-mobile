@@ -6,9 +6,15 @@ import { WindowComponentTextToSpeech as TextWindow } from "../components/WindowC
 import { HeaderNameComponent as Header } from "../components/HeaderNameComponent/HeaderNameComponent";
 
 export class TextToSpeechPage extends React.Component {
+
+    constructor(props) {
+        super(props);
+        this.navigation = props.navigation
+      }
+
     render() {
         const pressHandlerRecordPlayback = () => {
-            this.props.navigation.navigate("RecordPlaybackPage");
+            this.navigation.navigate("RecordPlaybackPage");
         };
 
         return (

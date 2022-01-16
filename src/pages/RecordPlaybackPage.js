@@ -6,9 +6,15 @@ import { ImageBackgroundComponent as BcgImg } from "../components/BackgroundImag
 import { HeaderNameComponent as Header } from "../components/HeaderNameComponent/HeaderNameComponent";
 
 export class RecordPlaybackPage extends React.Component {
+
+    constructor(props) {
+        super(props);
+        this.navigation = props.navigation
+      }
+      
     render() {
         const pressHandlerTextToSpeech = () => {
-            this.props.navigation.navigate("TextToSpeechPage");
+            this.navigation.navigate("TextToSpeechPage");
         };
         return (
             <BcgImg>
