@@ -1,7 +1,7 @@
 import { createStackNavigator } from "react-navigation-stack";
 import { createAppContainer } from "react-navigation";
-import RecordPlaybackPage from "../pages/RecordPlaybackPage";
-import TextToSpeechPage from "../pages/TextToSpeechPage";
+import { RecordPlaybackPage } from "../pages/RecordPlaybackPage";
+import { TextToSpeechPage } from "../pages/TextToSpeechPage";
 
 const screens = {
     RecordPlaybackPage: {

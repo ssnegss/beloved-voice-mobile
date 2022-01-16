@@ -12,12 +12,10 @@ export const WindowComponentRecordPlayback = () => {
     const [startButtonDisabled, setStartButtonDisabled] = useState(false);
     const [stopButtonDisabled, setStopButtonDisabled] = useState(true);
     const [playButtonDisabled, setPlayButtonDisabled] = useState(true);
-    const [pauseButtonDisabled, setPauseButtonDisabled] = useState(true);
 
     const [startButtonImage, setStartButtonImage] = useState(require("../../img/start.png"));
     const [stopButtonImage, setStopButtonImage] = useState(require("../../img/stop.png"));
     const [playButtonImage, setPlayButtonImage] = useState(require("../../img/play.png"));
-    const [pauseButtonImage, setPauseButtonImage] = useState(require("../../img/pause.png"));
 
     async function startRecording() {
         try {
@@ -83,18 +81,6 @@ export const WindowComponentRecordPlayback = () => {
         Speech.speak(textFieldValue, { language: "ru" });
     };
 
-    const handlePauseButtonClick = () => {
-        setStartButtonDisabled(false);
-        setStopButtonDisabled(true);
-        setPlayButtonDisabled(false);
-        setPauseButtonDisabled(true);
-
-        setStartButtonImage(require("../../img/start.png"));
-        setStopButtonImage(require("../../img/stop-disabled.png"));
-        setPlayButtonImage(require("../../img/play.png"));
-        setPauseButtonImage(require("../../img/pause-disabled.png"));
-    };
-
     return (
         <>
             <TextWindow value={textFieldValue} onValueChange={(e) => setTextFieldValue} />
@@ -119,13 +105,6 @@ export const WindowComponentRecordPlayback = () => {
                     disabled={playButtonDisabled}
                 >
                     <Image source={playButtonImage} />
-                </TouchableOpacity>
-                <TouchableOpacity
-                    style={styles.buttonStyle}
-                    onClick={handlePauseButtonClick}
-                    disabled={pauseButtonDisabled}
-                >
-                    <Image source={pauseButtonImage} />
                 </TouchableOpacity>
             </View>
         </>
